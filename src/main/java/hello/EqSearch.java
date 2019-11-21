@@ -1,3 +1,7 @@
+package hello;
+
+
+
 public class EqSearch {
 
 	private int distance;
@@ -10,14 +14,12 @@ public class EqSearch {
 		return minmag;
 	}
 	public void setDistance(int distance) {
-		this->distance = distance;
+		this.distance = distance;
 	}
 	public void setMinmag(int minmag) {
-		this->minmag = minmag;
+		this.minmag = minmag;
 	}
 
 	public EqSearch() {
-		distance = 0;
-		minmag = 0;
 	}	
-};
+}
