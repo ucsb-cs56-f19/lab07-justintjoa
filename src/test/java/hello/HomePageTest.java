@@ -76,10 +76,11 @@ public class HomePageTest {
                 .andExpect(xpath("/html/body/div[1]/nav/div/ul[1]/li[2]/a").string("Earthquake Search"));
     }   
 	@Test
-    public void nopage2() throws Exception {
+    public void page2user() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div[1]/nav/div/ul[1]/li[3]/a").doesNotExist());
+                .andExpect(xpath("/html/body/div[1]/nav/div/ul[1]/li[3]/a").exists())
+                .andExpect(xpath("/html/body/div[1]/nav/div/ul[1]/li[3]/a").string("Users"));
     }
 
 }
